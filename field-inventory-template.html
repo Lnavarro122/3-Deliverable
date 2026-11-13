@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Volunteer Interest Form | Maple Street Community Garden</title>
+        <style>
+        body{
+            font-family:Arial,sans-serif;
+            line-height:1.5;
+            max-width:80rem;
+            margin:auto;
+            padding:1rem;
+            color:#191919;
+        }
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+        th,td{
+            padding:.6rem;
+            border:1px solid #999;
+            text-align:left;
+            vertical-align:top;
+        }
+        th{
+            background:#f1f1f1;
+        }
+        </style>
+        </head>
+        <body>
+            <p><a href="index.html">Return to main page</a></p>
+            <h1>F2 · Task and Data Plan</h1>
+            <p>Duplicate rows as needed. Justify every collected value.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Visible label / question</th>
+                        <th>Why necessary now?</th>
+                        <th>Required?</th>
+                        <th>Native control/type</th>
+                        <th>Submitted name/value</th>
+                        <th>Autocomplete/inputmode</th>
+                        <th>Constraint/instruction</th>
+                        <th>Sensitivity and minimization decision</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Example only</td>
+                        <td>Replace</td>
+                        <td>Yes/No</td>
+                        <td>Replace</td>
+                        <td>Replace</td>
+                        <td>Replace or N/A</td>
+                        <td>Replace or none</td>
+                        <td>Replace</td>
+                    </tr>
+                    <tr>
+                        <td>Preferred Name</td>
+                        <td>To identify the volunteer and personalize communication.</td>
+                        <td>Yes</td>
+                        <td>Text input</td>
+                        <td>preferred</td>
+                        <td>name</td>
+                        <td>2-100 characters</td>
+                        <td>This is a basic identifier; no sensitive data is collected.</td>
+                    </tr>
+                    <tr>
+                        <td>Email Address</td>
+                        <td>To send confirmation and updates regarding volunteer activities.</td>
+                        <td>Yes</td>
+                        <td>Email input</td>
+                        <td>email</td>
+                        <td>email</td>
+                        <td>Must be a valid email format.</td>
+                        <td>Email addresses are considered personal information; we will not share them.</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td>To contact the volunteer in case of last-minute changes or emergencies.</td>
+                        <td>No</td>
+                        <td>Tel input</td>
+                        <td>phone</td>
+                        <td>tel</td>
+                        <td>Must be a valid phone number format.</td>
+                        <td>Phone numbers are personal information; we will not share them.</td>
+                    </tr>
+                    <tr>
+                        <td>Preferred Volunteer Role</td>
+                        <td>To match volunteers with suitable tasks based on their interests and skills.</td> 
+                        <td>Yes</td>
+                        <td>Select dropdown</td>
+                        <td>role</td>
+                        <td>N/A</td>
+                        <td>Must select one of the provided options.</td>
+                        <td>This information helps us organize volunteers effectively; it is not sensitive.</td>
+                    </tr>
+                    <tr>
+                        <td>Availability</td>
+                        <td>To schedule volunteers for tasks based on their available times.</td>
+                        <td>Yes</td>
+                        <td>Checkboxes</td>
+                        <td>availability</td>
+                        <td>N/A</td>
+                        <td>Must select at least one time slot.</td> 
+                        <td>This information is used solely for scheduling purposes; it is not sensitive.</td>
+                    </tr>
+                    <tr>Gardening Experience</td>
+                        <td>To assess the volunteer's skill level and assign appropriate tasks.</td>
+                        <td>No</td>
+                        <td>Radio buttons</td>
+                        <td>experience</td>
+                        <td>N/A</td>
+                        <td>Must select one option.</td>
+                        <td>This information is used for task assignment; it is not sensitive.</td>
+
+                    <tr>
+                        <td>Emergency Contact Name</td>
+                        <td>To have a point of contact in case of emergencies during volunteer activities.</td>
+                        <td>No</td>
+                        <td>Text input</td>
+                        <td>emergency_contact_name</td>
+                        <td>name</td>
+                        <td>2-100 characters</td>
+                        <td>This is sensitive information; we will keep it confidential and only use it in emergencies.</td>
+                    <tr>
+                        <td>Additional Comments</td>
+                        <td>To allow volunteers to provide any extra information or special requests.</td>
+                        <td>No</td>
+                        <td>Textarea</td>
+                        <td>comments</td>
+                        <td>N/A</td>
+                        <td>Optional; no specific constraints.</td>
+                        <td>This field is optional and may contain personal opinions; we will not share this information.</td>       
+                                  
+                </tbody>
+            </table>
+        </body>
+        </html>

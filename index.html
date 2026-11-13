@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Volunteer Sign Up Sheet | GardenGo</title><link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="page-header">
+            <p class="eyebrow">GardenGo Volunteer Interest Form</p>
+            <h1>Volunteer Sign Up Sheet</h1>
+            <p class="lede">For those looking to volunteer in our garden and make an impact! It takes about 3 minutes of your time and a GardenGo coordinator will get back to you within 2-3 business days.</p>
+        </header>
+        <main>
+            <section id="expectations">
+                <h2>F1 · Purpose and Expectations</h2>
+                <p><strong>Task:</strong> Sign up below for a volunteer time that works best for you and a GardenGo coordinator will confirm that time within 2-3 business days</p>
+                <p><strong>Audience:</strong> Everyone is welcome! Please specify if you are an organization.</p>
+                <p><strong>Time expected:</strong> 3 minutes of your time</p>
+                <p><strong>Required and optional:</strong> Questions with a <strong>required</strong> note cannot be skipped. Questions with a <strong>optional</strong> note may be skipped.</p>
+                <p><strong>ImportantPrivacy Statement</strong></p> 
+                <p>GardenGo's CEO Mr.Asparagus respects your privacy. The personal information you provide on this form (such as your name, phone number, email address, and emergency contact) will be used solely for coordinating volunteer shifts and ensuring your safety while volunteering.</p>
+                <p>Your information is not being stored because this is fictional.</p>
+            </section>
+            <!-- F4 · Requirements and Validation -->
+            <section id="requirements">
+                <h2>F4 · Requirements before you sign up</h2> 
+                <p> <strong>Email address:</strong> Enter an address in the format name@example.com.</p>
+                <p> <strong>Phone number:</strong> Enter a phone number in the format 123-456-7890.</p>
+                <p> <strong>Availability:</strong> Select your availability from the options.</p>
+            </section>
+
+            <!-- F3 · Form -->
+            <form action="submit" method="GET">
+                <fieldset>
+                    <legend>F3 · Contact information</legend>
+                    <p class="help">Please fill out all required fields.</p>
+                    <div class="field">
+                        <label for="preferred"> Preferred Name (2-100 characters):</label>
+                        <p class="help" id="preferred-help">Enter your preferred name. This is the name you will check into upon arrival.</p>
+                        <input id="preferred" name="preferred" type="text" autocomplete="name" minLength="2" maxLength="100" required aria-describedby="preferred-help preferred-error">
+                        <p class="error-message" id="preferred-error"><strong>Error:</strong> Please enter a name between 2 and 100 characters.</p>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email address (required)</label>
+                        <p class ="help" id="email-help">Enter an email in the format name@example.com</p>
+                        <input id="email" name="email" type="email" autocomplete="email" maxLength="100"required aria-describedby="email-help email-error">
+                        <p class="error-message" id="email-error"><strong>Error:</strong> Please enter a valid email address in the format name@example.com</p>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone number (required)</label>
+                        <p class="help" id="phone-help">Enter a phone number in the format (123) 456-7890</p>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel" maxLength="20" required aria-describedby="phone-help phone-error">
+                        <p class="error-message" id="phone-error"><strong>Error:</strong> Please enter a valid phone number in the format (123) 456-7890</p>
+                    </div>
+                    <div class="field">
+                        <label for="group-size">Group size (optional)</label>
+                        <input id="group-size" name="group-size" type="number" min="1" max="8" aria-describedby="group-size-help">
+                        <p class="help" id="group-size-help">Enter the number of people in your group.</p>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>F3 · Availability</legend>
+                    <p class="help"> Click the time that works best for you.</p>
+                        <label class="choice" for ="morning-hours"><input type="radio" name="shift" value="morning"> Morning (8:00 AM - 11:00 PM)</label>
+                        <label class="choice" for ="afternoon-hours"><input type="radio" name="shift" value="afternoon"> Afternoon (12:00 PM - 3:00PM)</label>
+                        <label class="choice" for ="evening-hours"><input type="radio" name="shift" value="evening"> Evening (3:00 PM - 6:00 PM)</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>F3 · Gardening experience</legend>
+                        <p class="help">Select your gardening experience level.</p>
+                        <div class="field">
+                            <label for="choice"> Gardening experience</label>
+                            <p class="help" id="choice-help">Select your gardening experience level.</p>
+                            <select id="choice" name="choice" aria-describedby="choice-help choice-error">
+                                <option value="">Select an option</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                            <p class="error-message" id="choice-error"><strong>Error:</strong> Please select your gardening experience level.</p>
+                        </div>
+                        <fieldset class="field">
+                            <legend>F3 · Emergency contact</legend>
+                            <p class="help">Please provide an emergency contact.</p>
+                            <div class="field">
+                                <label for="emergency-name">Emergency contact name (required)</label>
+                                <input id="emergency-name" name="emergency-name" type="text" required aria-describedby="emergency-name-help emergency-name-error">
+                                <p class="error-message" id="emergency-name-error"><strong>Error:</strong> Please enter the name of your emergency contact.</p>
+                            </div>
+               
+                    </fieldset>
+                    <div class="field">
+                        <label for="details">Anything you'd like to share before your shift?</label>
+                        <p class="help" id="details-help">Anything you think we should know about your shift to make your shift easier.</p>
+                        <textarea id="details" name="details" aria-describedby="details-help"></textarea>
+                    </div>
+                    <button type="submit">Submit my fictional request</button>
+                </form>
+
+                <table>
+                    
+                <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                        </tr>
+  
+
+
+
+
+
+
+
+                <section id="states">
+                    <h2>F5 · State and Recovery Specimen</h2>
+                    <p>Document default, focus, required, valid, invalid, disabled, and a static server-returned error. </p>
+                     
+                    <h3>State Matrix</h3>
+                    <div class="state-matrix"></div>
+                        <p>Document the states of the form controls and how they are presented to the user.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">State</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Example</th> 
+                            </tr>
+                        </thead>                   
+                <tbody>
+                    <tr>
+                        <th scope="row">Default</th>
+                        <td>Item is in its default state.</td>
+                        <td>This is bordered by a thin grey outline.</td>
+
+                        </tr>
+                        <tr>
+                        <th scope="row">Focus</th>
+                        <td>Item is the only item that is focused on and highlighted.</td>
+                        <td>A blue box in the comment box will fill up the entirety of the box.</td>
+
+                        </tr>
+                        <tr>
+                        <th scope="row">Required</th>
+                        <td>Must answer question to continue.</td>
+                        <td>(required) is shown.</td>
+
+                        </tr>
+                        <tr>
+                        <th scope="row">Valid</th>
+                        <td>The input is accepted by the system.</td>
+                        <td>A green highlighted color will appear around the answer.</td>
+
+                        </tr>
+                        <tr>
+                        <th scope="row">Invalid</th>
+                        <td>The input is not accepted by the system.</td>
+                        <td>A red highlighted color will appear around the answer.</td>
+
+                        </tr>
+                        <tr>
+                        <th scope="row">Disabled</th>
+                        <td>The input is not available for interaction.</td>
+                        <td>The input is grayed out and can't be touched by the user..</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Server-returned error</th>
+                        <td>Entry is not accepted by the server.</td>
+                        <td>A message will be displayed with an error code.</td>
+                        </tr>
+                    </tbody>
+                    </table>    
+
+  
+                    </div>
+
+                    <div class="error-summary">
+                        <h3>There is a problem with the fictional submission</h3>
+                        <p><a href="#error-example">Email address needs attention</a></p>
+                    </div>
+
+
+
+
+            
+                    <div class="states">
+                        <div class="field">
+                            <label for="default-example">Preferred email address</label>
+                            <p class="help" id="default-help">Enter an email address in the format name@example.com</p>
+                             <input id="default-example" type="text" aria-describedby="default-help">
+                        </div>
+                        </div>
+                        <div class="field field-focus">
+                            <label for="focus-example">Preferred name (required)</label>
+                            <p class="help" id="focus-help">Enter your preferred name. This is the name you will check into upon arrival.</p>
+                            <input id="focus-example" type="text" value="" aria-describedby="focus-help">
+                        </div>
+                        <div class="field field-valid">
+                            <label for="valid-preferred">Valid example</label>
+                            <input id="valid-preferred" type="email" value="valid@example.com" aria-describedby="valid-message">
+                            <p id="valid-message">This is a valid email address.</p>
+                        </div>
+                        <div class="field field-invalid">
+                            <label for="invalid-example">Invalid Email address (required)</label>
+                            <input id="invalid-example" type="email" value="exampleex.ample@examp" aria-invalid="true" aria-describedby="invalid-message">
+                            <p id="invalid-message"><strong>Error:</strong> Enter an email address in the correct format.
+                        </div>
+                        <div class="field field-error">
+                        <label for="error-example">Email address(required)</label>
+                        <input id="error-example" type="email" value="alexdonuexample.com" aria-invalid="true" aria-describedby="error-message">
+                        <p id="error-message"><strong>Error:</strong> Enter an email address in the format name@example.com.</p>
+                    </div>
+                        <div class="field field-disabled">
+                            <label for="disabled-example">Disabled example</label>
+                            <p class="help" id="disabled-help">This field is disabled and cannot be edited.</p>
+                            <input id="disabled-example" type="text" disabled aria-disabled="true">
+                    <button type="button" disabled>Disabled example</button>
+                    </div>
+                </section>
+                <section id="Links">
+                    <h2>F2 and F6 · Planning and Evidence</h2>
+                    <p><strong>Links</strong> <a href="field-inventory-template.html">field inventory</a></p>
+                    <p><a href="state-matrix.html">state matrix</a></p>
+                    <p><a href="test-record.html"> test record</a></p>
+                    <p><a href="ai-disclosure.html">AI disclosure</a>.</p>
+                </section>
+            </main>
+        </body>
+        </html>
