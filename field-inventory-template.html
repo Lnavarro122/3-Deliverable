@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Volunteer Interest Form | Maple Street Community Garden</title>
+        <title>Field Inventory Template | GardenGo</title>
         <style>
         body{
             font-family:Arial,sans-serif;
@@ -13,8 +13,13 @@
             padding:1rem;
             color:#191919;
         }
+        h1, h2{
+            margin-top: 2rem;
+            margin-bottom:1rem;
+        }
         table{
             width:100%;
+            min-width:50rem;
             border-collapse:collapse;
         }
         th,td{
@@ -22,16 +27,20 @@
             border:1px solid #999;
             text-align:left;
             vertical-align:top;
+            font-weight: 700;
         }
-        th{
+        th, td{
             background:#f1f1f1;
+            padding: 0.5rem;
+            border: 2px solid grey;
         }
         </style>
         </head>
         <body>
             <p><a href="index.html">Return to main page</a></p>
-            <h1>F2 · Task and Data Plan</h1>
-            <p>Duplicate rows as needed. Justify every collected value.</p>
+            <h1>Field Inventory </h1>
+            <p>Submitting this data below will give us the information we need to proceed with your application and with your volunteering shift at GardenGo..</p>
+            <p>Information collected is for scheduling purposed only and automatically deleted 10 days following your shift.</p>
             <table>
                 <thead>
                     <tr>
@@ -58,13 +67,13 @@
                     </tr>
                     <tr>
                         <td>Preferred Name</td>
-                        <td>To identify the volunteer and personalize communication.</td>
+                        <td>To identify the volunteer and to ensure that the volunteer is paired correctly in the group..</td>
                         <td>Yes</td>
                         <td>Text input</td>
                         <td>preferred</td>
-                        <td>name</td>
-                        <td>2-100 characters</td>
-                        <td>This is a basic identifier; no sensitive data is collected.</td>
+                        <td>autocomplete=name</td>
+                        <td>minLength=2, maxLength=100. 2-100 characters</td>
+                        <td>Low sensitivity because preferred name is not sensitive information because volunteers don't need to share full names.</td>
                     </tr>
                     <tr>
                         <td>Email Address</td>
@@ -72,19 +81,19 @@
                         <td>Yes</td>
                         <td>Email input</td>
                         <td>email</td>
-                        <td>email</td>
-                        <td>Must be a valid email format.</td>
-                        <td>Email addresses are considered personal information; we will not share them.</td>
+                        <td>autocomplete=email</td>
+                        <td>Must be a valid email format of name@example.com. "100" characters required</td>
+                        <td>Email addresses are sensitive information and will be used for contacting purposes regarding volunteering only.</td>
                     </tr>
                     <tr>
                         <td>Phone Number</td>
-                        <td>To contact the volunteer in case of last-minute changes or emergencies.</td>
+                        <td>To contact the volunteer in case anything changes about their shift.</td>
                         <td>No</td>
                         <td>Tel input</td>
                         <td>phone</td>
-                        <td>tel</td>
+                        <td>autocomplete=tel</td>
                         <td>Must be a valid phone number format.</td>
-                        <td>Phone numbers are personal information; we will not share them.</td>
+                        <td>Phone numbers are personal information and will not be shared.</td>
                     </tr>
                     <tr>
                         <td>Preferred Volunteer Role</td>
@@ -93,8 +102,8 @@
                         <td>Select dropdown</td>
                         <td>role</td>
                         <td>N/A</td>
-                        <td>Must select one of the provided options.</td>
-                        <td>This information helps us organize volunteers effectively; it is not sensitive.</td>
+                        <td>Must select one of the provided options "0-5".</td>
+                        <td>This information helps us organize volunteers effectively amongst the groups.</td>
                     </tr>
                     <tr>
                         <td>Availability</td>
@@ -104,16 +113,16 @@
                         <td>availability</td>
                         <td>N/A</td>
                         <td>Must select at least one time slot.</td> 
-                        <td>This information is used solely for scheduling purposes; it is not sensitive.</td>
-                    </tr>
-                    <tr>Gardening Experience</td>
+                        <td>This is not sensitive information and is used for scheduling purposes.</td>
+                    <tr>
+                        <td>Gardening Experience</td>
                         <td>To assess the volunteer's skill level and assign appropriate tasks.</td>
                         <td>No</td>
                         <td>Radio buttons</td>
                         <td>experience</td>
                         <td>N/A</td>
                         <td>Must select one option.</td>
-                        <td>This information is used for task assignment; it is not sensitive.</td>
+                        <td>This information is used for task assignment and is not sensitive.</td>
 
                     <tr>
                         <td>Emergency Contact Name</td>
@@ -121,18 +130,18 @@
                         <td>No</td>
                         <td>Text input</td>
                         <td>emergency_contact_name</td>
-                        <td>name</td>
-                        <td>2-100 characters</td>
-                        <td>This is sensitive information; we will keep it confidential and only use it in emergencies.</td>
+                        <td>emergency-name</td>
+                        <td>Provide contact information for emergency in 1-555-555-5555 format.</td>
+                        <td>This is sensitive information and we will only use it in emergencies.</td>
                     <tr>
                         <td>Additional Comments</td>
                         <td>To allow volunteers to provide any extra information or special requests.</td>
                         <td>No</td>
-                        <td>Textarea</td>
+                        <td>Text area</td>
                         <td>comments</td>
                         <td>N/A</td>
-                        <td>Optional; no specific constraints.</td>
-                        <td>This field is optional and may contain personal opinions; we will not share this information.</td>       
+                        <td>Optional and whatever the volunteer wanted to share.</td>
+                        <td>This field is optional and may or may not be sensitive depending on what the volunteer provides.</td>       
                                   
                 </tbody>
             </table>

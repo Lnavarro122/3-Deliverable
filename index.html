@@ -18,7 +18,7 @@
                 <p><strong>Audience:</strong> Everyone is welcome! Please specify if you are an organization.</p>
                 <p><strong>Time expected:</strong> 3 minutes of your time</p>
                 <p><strong>Required and optional:</strong> Questions with a <strong>required</strong> note cannot be skipped. Questions with a <strong>optional</strong> note may be skipped.</p>
-                <p><strong>ImportantPrivacy Statement</strong></p> 
+                <p><strong>Important Privacy Statement</strong></p> 
                 <p>GardenGo's CEO Mr.Asparagus respects your privacy. The personal information you provide on this form (such as your name, phone number, email address, and emergency contact) will be used solely for coordinating volunteer shifts and ensuring your safety while volunteering.</p>
                 <p>Your information is not being stored because this is fictional.</p>
             </section>
@@ -31,12 +31,12 @@
             </section>
 
             <!-- F3 · Form -->
-            <form action="submit" method="GET">
+            <form action="#" method="GET">
                 <fieldset>
                     <legend>F3 · Contact information</legend>
                     <p class="help">Please fill out all required fields.</p>
                     <div class="field">
-                        <label for="preferred"> Preferred Name (2-100 characters):</label>
+                        <label for="preferred"> Preferred Name (2-100 characters)(required):</label>
                         <p class="help" id="preferred-help">Enter your preferred name. This is the name you will check into upon arrival.</p>
                         <input id="preferred" name="preferred" type="text" autocomplete="name" minLength="2" maxLength="100" required aria-describedby="preferred-help preferred-error">
                         <p class="error-message" id="preferred-error"><strong>Error:</strong> Please enter a name between 2 and 100 characters.</p>
@@ -63,9 +63,9 @@
                 <fieldset>
                     <legend>F3 · Availability</legend>
                     <p class="help"> Click the time that works best for you.</p>
-                        <label class="choice" for ="morning-hours"><input type="radio" name="shift" value="morning"> Morning (8:00 AM - 11:00 PM)</label>
-                        <label class="choice" for ="afternoon-hours"><input type="radio" name="shift" value="afternoon"> Afternoon (12:00 PM - 3:00PM)</label>
-                        <label class="choice" for ="evening-hours"><input type="radio" name="shift" value="evening"> Evening (3:00 PM - 6:00 PM)</label>
+                        <label class="choice" for="morning-hours"><input id="morning-hours" name="shift" value="morning"> Morning (8:00 AM - 11:00 PM)</label>
+                        <label class="choice" for="afternoon-hours"><input id="afternoon-hours" name="shift" value="afternoon"> Afternoon (12:00 PM - 3:00PM)</label>
+                        <label class="choice" for="evening-hours"><input id="evening-hours" name="shift" value="evening"> Evening (3:00 PM - 6:00 PM)</label>
                     </fieldset>
                     <fieldset>
                         <legend>F3 · Gardening experience</legend>
@@ -81,9 +81,10 @@
                             </select>
                             <p class="error-message" id="choice-error"><strong>Error:</strong> Please select your gardening experience level.</p>
                         </div>
+                        </fieldset>
                         <fieldset class="field">
                             <legend>F3 · Emergency contact</legend>
-                            <p class="help">Please provide an emergency contact.</p>
+                            <p class="help" id="emergency-name-help">Please provide an emergency contact's phone number 1-555-555-5555.</p>
                             <div class="field">
                                 <label for="emergency-name">Emergency contact name (required)</label>
                                 <input id="emergency-name" name="emergency-name" type="text" required aria-describedby="emergency-name-help emergency-name-error">
@@ -99,27 +100,9 @@
                     <button type="submit">Submit my fictional request</button>
                 </form>
 
-                <table>
-                    
-                <tbody>
-                    <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-
-                        </tr>
-  
-
-
-
-
-
-
-
                 <section id="states">
                     <h2>F5 · State and Recovery Specimen</h2>
-                    <p>Document default, focus, required, valid, invalid, disabled, and a static server-returned error. </p>
+                    <p>Here below is examples of common functions that may be displayed for each state. </p>
                      
                     <h3>State Matrix</h3>
                     <div class="state-matrix"></div>
@@ -182,6 +165,7 @@
                     <div class="error-summary">
                         <h3>There is a problem with the fictional submission</h3>
                         <p><a href="#error-example">Email address needs attention</a></p>
+                        <p> Error code: user. Please try again with the email address.</p>
                     </div>
 
 
@@ -203,17 +187,17 @@
                         <div class="field field-valid">
                             <label for="valid-preferred">Valid example</label>
                             <input id="valid-preferred" type="email" value="valid@example.com" aria-describedby="valid-message">
-                            <p id="valid-message">This is a valid email address.</p>
+                            <p class="valid-message-static">This is a valid email address.</p>
                         </div>
                         <div class="field field-invalid">
                             <label for="invalid-example">Invalid Email address (required)</label>
                             <input id="invalid-example" type="email" value="exampleex.ample@examp" aria-invalid="true" aria-describedby="invalid-message">
-                            <p id="invalid-message"><strong>Error:</strong> Enter an email address in the correct format.
+                            <p class="invalid-message-static"><strong>Error:</strong> Enter an email address in the correct format.
                         </div>
                         <div class="field field-error">
                         <label for="error-example">Email address(required)</label>
                         <input id="error-example" type="email" value="alexdonuexample.com" aria-invalid="true" aria-describedby="error-message">
-                        <p id="error-message"><strong>Error:</strong> Enter an email address in the format name@example.com.</p>
+                        <p class="error-message-static"><strong>Error:</strong> Enter an email address in the format name@example.com.</p>
                     </div>
                         <div class="field field-disabled">
                             <label for="disabled-example">Disabled example</label>
@@ -221,14 +205,16 @@
                             <input id="disabled-example" type="text" disabled aria-disabled="true">
                     <button type="button" disabled>Disabled example</button>
                     </div>
+                </div>
                 </section>
                 <section id="Links">
                     <h2>F2 and F6 · Planning and Evidence</h2>
-                    <p><strong>Links</strong> <a href="field-inventory-template.html">field inventory</a></p>
-                    <p><a href="state-matrix.html">state matrix</a></p>
-                    <p><a href="test-record.html"> test record</a></p>
+                    <p><strong>Links</p>
+
+                    <p><a href="field-inventory-template.html">field inventory</a></p>
                     <p><a href="ai-disclosure.html">AI disclosure</a>.</p>
                 </section>
             </main>
         </body>
         </html>
+        

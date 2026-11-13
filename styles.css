@@ -108,7 +108,7 @@ button{
 }
 :focus-visible,.field-focus input{
    background: lightblue;
-    outline: 0.4em solid light blue;
+    outline: 0.4em solid lightblue;
     outline-offset:.2rem;
 }
 .field-valid input{
