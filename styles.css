@@ -61,7 +61,6 @@ fieldset{
     border:1px solid #d0d0d0;
     border-radius:var(--radius);
     min-width:0;
-    background:var();
 }
 legend,label{
     font-weight:700;
